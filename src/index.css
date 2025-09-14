@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+
+body, #root {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar {
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.nav-item {
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card-expanded {
+  z-index: 50;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.project-overlay {
+  transition: opacity 0.3s ease;
+}
