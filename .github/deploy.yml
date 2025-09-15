@@ -19,8 +19,8 @@ build-deploy:
       with:
         node-version: '18'  # Specify the Node.js version you want to use
 
-    - name: Install dependencies
-      run: npm install
+    - name: Install Dependencies
+      run: npm run build
 
     - name: Build the project
       run: npm run build
